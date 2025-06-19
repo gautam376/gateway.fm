@@ -1,0 +1,4 @@
+http://localhost:8545 - DOWN
+http://localhost:5052 - DOWN
+http://example.com - UP
+http://nonexistent.localhost - DOWN
