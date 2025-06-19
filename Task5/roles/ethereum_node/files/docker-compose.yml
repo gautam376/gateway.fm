@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  nethermind:
+    image: nethermind/nethermind:1.23.3
+    container_name: hoodi-node
+    restart: unless-stopped
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+      - "8545:8545"
+      - "8546:8546"
+    volumes:
+      - nethermind_data:/nethermind/nethermind_db
+    command: >
+      --config hoodi
+      --datadir /nethermind/nethermind_db
+      --networkid 666666
+      --sync fast
+      --JsonRpc.Enabled true
+      --JsonRpc.Host 0.0.0.0
+      --JsonRpc.Port 8545
+      --JsonRpc.WebSocketsPort 8546
+      --JsonRpc.EnabledModules Eth,Net,Web3
+
+volumes:
+  nethermind_data:

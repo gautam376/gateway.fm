@@ -1,0 +1,36 @@
+```yaml
+- name: Update APT cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install Docker
+  apt:
+    name: docker.io
+    state: present
+
+- name: Install Docker Compose
+  apt:
+    name: docker-compose
+    state: present
+
+- name: Create Ethereum node directory
+  file:
+    path: /opt/ethereum
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: '0755'
+
+- name: Copy docker-compose file
+  copy:
+    src: docker-compose.yml
+    dest: /opt/ethereum/docker-compose.yml
+    owner: ubuntu
+    group: ubuntu
+    mode: '0644'
+
+- name: Launch Nethermind Ethereum node
+  shell: docker-compose up -d
+  args:
+    chdir: /opt/ethereum

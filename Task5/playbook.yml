@@ -1,0 +1,5 @@
+- name: Deploy Nethermind Ethereum Node on Hoodi Testnet
+  hosts: ethereum_node
+  become: true
+  roles:
+    - ethereum_node
