@@ -1,0 +1,28 @@
+import requests
+import json
+
+# RPC endpoint
+url = "http://localhost:8545"
+headers = {"Content-Type": "application/json"}
+
+# JSON-RPC payload
+payload = {
+    "jsonrpc": "2.0",
+    "method": "eth_syncing",
+    "params": [],
+    "id": 1
+}
+
+try:
+    # Send POST request
+    response = requests.post(url, headers=headers, json=payload)
+    response.raise_for_status()
+    
+    # Parse and print nicely
+    result = response.json()
+    print("✅ Response received:")
+    print(json.dumps(result, indent=2))
+
+except requests.exceptions.ConnectionError:    print("❌ Could not connect to the Ethereum node at", url)
+except Exception as e:
+    print("⚠️ Error:", e)
