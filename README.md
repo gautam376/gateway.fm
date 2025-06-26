@@ -6,9 +6,9 @@ Thank you for reviewing my submission for the Junior Node Operator role. This re
 
 
 
-## ✅ Task Summary
+##  Task Summary
 
-### 1. 🐧 Basic Linux Knowledge
+### 1.  Basic Linux Knowledge
 - File: `Task1-BasicLinux/answers.md`
 - Includes Linux commands for:
   - Listing Ethereum processes
@@ -19,7 +19,7 @@ Thank you for reviewing my submission for the Junior Node Operator role. This re
 
 ---
 
-### 2. ⚙️ Ethereum Node on Hoodi Testnet
+### 2.  Ethereum Node on Hoodi Testnet
 - Directory: `Task2-HoodiNode/`
 - Includes:
   - `docker-compose.yml`
@@ -29,21 +29,21 @@ Thank you for reviewing my submission for the Junior Node Operator role. This re
 
 ---
 
-### 3. 📡 Calling JSON-RPC Endpoint
+### 3. Calling JSON-RPC Endpoint
 - File: `Task3-RPCCall/check_sync.py`
 - Description: Python script to call `eth_syncing` RPC method
 - Output saved to: `Task3-RPCCall/output.txt`
 
 ---
 
-### 4. 📊 Node Health Checker
+### 4.  Node Health Checker
 - File: `Task4-NodeChecker/check_nodes.py`
 - Reads URLs from `nodes.txt` and checks for HTTP 200
 - Output written to `report.txt`
 
 ---
 
-### 5. 🚀 Bonus: Ansible Automation
+### 5.  Bonus: Ansible Automation
 - Directory: `BonusTask-Ansible/`
 - Automates deployment of Ethereum node to remote server using Ansible
 - Includes:
@@ -54,7 +54,7 @@ Thank you for reviewing my submission for the Junior Node Operator role. This re
 
 ---
 
-## 🔧 Requirements
+##  Requirements
 
 - Python 3.x
 - Docker & Docker Compose
@@ -63,7 +63,7 @@ Thank you for reviewing my submission for the Junior Node Operator role. This re
 
 ---
 
-## 📎 How to Use
+##  How to Use
 
 Clone the repo and navigate into each task's folder.  
 Follow the `README.md` or instructions provided per task.
@@ -78,7 +78,7 @@ Follow the `README.md` or instructions provided per task.
 
 
 
-### 1. 🐧 Screenshots of the Tasks
+### 1.  Screenshots of the Tasks
 
 
 
